@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Vc Main-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="vcMain" customModule="ThirdTester" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,87 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YWh-Xv-0Ew">
+                                <rect key="frame" x="198" y="28" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKD-5c-RpF">
+                                <rect key="frame" x="198" y="66" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-Xi-VAC">
+                                <rect key="frame" x="198" y="148" width="38" height="30"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoad_Clicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5zm-Jf-0aD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-qe-fAh">
+                                <rect key="frame" x="357" y="148" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSave_Clicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d65-V9-2lw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxG-7X-nh2">
+                                <rect key="frame" x="259" y="189" width="82" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au7-1u-Q7A">
+                                <rect key="frame" x="250" y="245" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Money" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Li-k1-a3P">
+                                <rect key="frame" x="198" y="104" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Money" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2F-T0-Kzy">
+                                <rect key="frame" x="269" y="274" width="62" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Average Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuR-qJ-CtF">
+                                <rect key="frame" x="232" y="320" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KKD-5c-RpF" firstAttribute="centerX" secondItem="kxG-7X-nh2" secondAttribute="centerX" constant="0.5" id="2sg-PN-Hne"/>
+                            <constraint firstItem="au7-1u-Q7A" firstAttribute="centerX" secondItem="kxG-7X-nh2" secondAttribute="centerX" id="3JM-re-IiL"/>
+                            <constraint firstItem="F2F-T0-Kzy" firstAttribute="centerX" secondItem="au7-1u-Q7A" secondAttribute="centerX" constant="5" id="5YJ-bi-mji"/>
+                            <constraint firstItem="F2F-T0-Kzy" firstAttribute="centerX" secondItem="WuR-qJ-CtF" secondAttribute="centerX" id="CE3-WC-UFT"/>
+                            <constraint firstItem="PKL-qe-fAh" firstAttribute="trailing" secondItem="KKD-5c-RpF" secondAttribute="trailing" id="ChX-gL-7fT"/>
+                            <constraint firstItem="YWh-Xv-0Ew" firstAttribute="centerX" secondItem="KKD-5c-RpF" secondAttribute="centerX" id="DRc-jW-uJg"/>
+                            <constraint firstAttribute="centerX" secondItem="KKD-5c-RpF" secondAttribute="centerX" id="Wog-nj-h2t"/>
+                            <constraint firstItem="7Li-k1-a3P" firstAttribute="centerX" secondItem="KKD-5c-RpF" secondAttribute="centerX" id="sdW-BE-FzW"/>
+                            <constraint firstItem="fuz-Xi-VAC" firstAttribute="leading" secondItem="KKD-5c-RpF" secondAttribute="leading" id="ybE-ZG-IZk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="averageLabel" destination="WuR-qJ-CtF" id="Vnw-EN-ICj"/>
+                        <outlet property="moneyLabel" destination="F2F-T0-Kzy" id="O1S-vq-nLF"/>
+                        <outlet property="nameLabel" destination="kxG-7X-nh2" id="HUY-td-i50"/>
+                        <outlet property="passwordLabel" destination="au7-1u-Q7A" id="BSE-8R-rpD"/>
+                        <outlet property="txtMoney" destination="7Li-k1-a3P" id="tZI-pF-mLF"/>
+                        <outlet property="txtPassword" destination="KKD-5c-RpF" id="YNK-KV-qIP"/>
+                        <outlet property="txtUsername" destination="YWh-Xv-0Ew" id="WMv-UQ-Wwy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
